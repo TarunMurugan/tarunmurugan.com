@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tarun Murugan</title>
+<meta name="description" content="Tarun Murugan. Portfolio coming soon.">
+<style>
+  :root {
+    --bg: #f5f2ec;
+    --fg: #1a1a18;
+    --muted: #7a776f;
+    --line: #d9d5cb;
+    --glow-a: #e9d9c4;
+    --glow-b: #cfdccf;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121211;
+      --fg: #ecebe6;
+      --muted: #8d8a82;
+      --line: #2c2b28;
+      --glow-a: #3a2f24;
+      --glow-b: #232f27;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+  }
+  /* soft, out-of-focus color wash */
+  body::before {
+    content: "";
+    position: absolute;
+    right: -10vw; bottom: -15vh;
+    width: 70vw; height: 70vw;
+    max-width: 900px; max-height: 900px;
+    background:
+      radial-gradient(circle at 35% 40%, var(--glow-a), transparent 60%),
+      radial-gradient(circle at 65% 65%, var(--glow-b), transparent 60%);
+    filter: blur(60px);
+    opacity: .9;
+    pointer-events: none;
+    z-index: 0;
+  }
+  header, main, footer { position: relative; z-index: 1; padding-left: 32px; padding-right: 32px; }
+  header {
+    padding-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    letter-spacing: -0.01em;
+  }
+  header a { color: var(--fg); text-decoration: none; }
+  header .muted { color: var(--muted); }
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 880px;
+    padding-top: 12vh;
+    padding-bottom: 12vh;
+  }
+  h1 {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    max-width: 440px;
+  }
+  h1 .muted { color: var(--muted); }
+  .link {
+    margin-top: 20px;
+    font-size: 17px;
+    letter-spacing: -0.01em;
+  }
+  .link a {
+    color: var(--fg);
+    text-decoration: none;
+    border-bottom: 1px solid var(--fg);
+    padding-bottom: 2px;
+    transition: opacity .2s;
+  }
+  .link a:hover { opacity: .55; }
+  .link .arrow { display: inline-block; transition: transform .2s; margin-left: 4px; }
+  .link a:hover .arrow { transform: translate(2px, -2px); }
+  footer {
+    padding-bottom: 28px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  @media (max-width: 600px) {
+    header, main, footer { padding-left: 20px; padding-right: 20px; }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <a href="/">Tarun Murugan</a>
+    <span class="muted">Portfolio, coming soon</span>
+  </header>
+
+  <main>
+    <h1>
+      This is meant to be my portfolio. <span class="muted">It will be updated when I have the time. Until then, here's my LinkedIn.</span>
+    </h1>
+    <p class="link">
+      <a href="https://www.linkedin.com/in/tarun-murugan" target="_blank" rel="noopener">linkedin.com/in/tarun-murugan<span class="arrow">↗</span></a>
+    </p>
+  </main>
+
+  <footer>© 2026 Tarun Murugan</footer>
+</body>
+</html>
